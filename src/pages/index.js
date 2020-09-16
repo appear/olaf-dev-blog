@@ -1,17 +1,29 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
 
-import PostLink from "../components/page-link"
+import Layout from "../shared/layout"
+import Posts from "../components/posts"
+
+const Conatiner = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+
+  border: 1px solid;
+`
 
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
   },
 }) => {
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
-  return <div>{Posts}</div>
+  return (
+    <Layout>
+      <Conatiner>
+        <Posts edges={edges} />
+      </Conatiner>
+    </Layout>
+  )
 }
 
 export default IndexPage
@@ -24,9 +36,10 @@ export const pageQuery = graphql`
           id
           excerpt(pruneLength: 250)
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY.MM.DD")
             title
           }
+          rawMarkdownBody
         }
       }
     }
