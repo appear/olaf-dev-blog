@@ -9,6 +9,7 @@ const HeaderContainer = styled.div`
   box-shadow: 0 3px 10px 0 rgba(114, 114, 114, 0.08);
   max-width: 800px;
   margin: 0 auto;
+  margin-bottom: 50px;
 `
 
 const Logo = styled.h1`
