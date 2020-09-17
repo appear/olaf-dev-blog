@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
+const SectionTitle = styled.div``
+
 const Container = styled.ul``
 
 const CardContainer = styled.li`
@@ -40,6 +42,7 @@ function Posts({ edges }) {
   console.log(edges)
   return (
     <Container>
+      <SectionTitle>최근 포스트</SectionTitle>
       {edges.map(
         ({
           node: {

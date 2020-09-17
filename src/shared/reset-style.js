@@ -28,7 +28,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-    color: #444;
+	color: #444;
+	font-family: 'NanumSquare', sans-serif; 
 }
 ol, ul {
 	list-style: none;
@@ -46,6 +47,5 @@ table {
 	border-spacing: 0;
 }
 a {color: #444; text-decoration: none; outline: none}
-
 a:hover, a:active {text-decoration: none; color:#444; background-color:#fff;}
 `
