@@ -8,8 +8,6 @@ import Posts from "../components/posts"
 const Conatiner = styled.div`
   max-width: 800px;
   margin: 0 auto;
-
-  border: 1px solid;
 `
 
 const IndexPage = ({

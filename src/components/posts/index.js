@@ -2,26 +2,27 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-const Container = styled.ul`
-  padding: 10px;
-`
+const Container = styled.ul``
 
 const CardContainer = styled.li`
-  border: 1px solid;
-  margin-bottom: 10px;
-  border-radius: 4px;
+  margin: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 22px;
   padding: 20px;
+  box-shadow: 0 1px 3px 0 rgba(151, 154, 157, 0.3),
+    0 2px 15px 0 rgba(151, 154, 157, 0.2);
 `
 
 const CardTitle = styled.div`
-  font-size: 24px;
+  font-size: 19px;
   font-weight: bold;
   margin-bottom: 20px;
 `
 const CardDate = styled.div`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400px;
   margin-bottom: 10px;
+  color: #999;
 `
 
 const CardBadgeConatiner = styled.div``
@@ -31,6 +32,8 @@ const CardBadge = styled.span`
   padding: 5px 10px;
   display: inline-block;
   margin-right: 5px;
+  font-size: 14px;
+  border-radius: 4px;
 `
 
 function Posts({ edges }) {

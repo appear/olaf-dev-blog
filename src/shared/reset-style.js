@@ -45,4 +45,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a {color: #444; text-decoration: none; outline: none}
+
+a:hover, a:active {text-decoration: none; color:#444; background-color:#fff;}
 `
