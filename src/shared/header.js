@@ -35,6 +35,7 @@ const MenuContainer = styled.li`
 `
 const Label = styled.span`
   font-size: 14px;
+  font-weight: bold;
 `
 
 function Header() {

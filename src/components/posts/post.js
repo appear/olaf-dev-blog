@@ -24,19 +24,8 @@ const CardDate = styled.div`
   color: #999;
 `
 
-const CardBadgeConatiner = styled.div``
-
-const CardBadge = styled.span`
-  border: 1px solid;
-  padding: 5px 10px;
-  display: inline-block;
-  margin-right: 5px;
-  font-size: 14px;
-  border-radius: 4px;
-`
-
 function Post({ post }) {
-  const { date, title, slug, tags } = post
+  const { date, title, slug, tags, category } = post
 
   if (!slug) {
     return null
@@ -49,11 +38,6 @@ function Post({ post }) {
       <Link to={slug}>
         <CardTitle>{title}</CardTitle>
         <CardDate>{date}</CardDate>
-        <CardBadgeConatiner>
-          {badges.map(label => (
-            <CardBadge>{label}</CardBadge>
-          ))}
-        </CardBadgeConatiner>
       </Link>
     </Conatiner>
   )

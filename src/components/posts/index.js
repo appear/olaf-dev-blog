@@ -10,6 +10,7 @@ const Section = styled.section`
 const Title = styled.div`
   font-size: 25px;
   font-weight: bold;
+  margin-bottom: 20px;
 `
 
 const PostContainer = styled.ul`
@@ -17,7 +18,6 @@ const PostContainer = styled.ul`
 `
 
 function Posts({ edges }) {
-  console.log(edges)
   return (
     <Section>
       <Title>최근 포스트.</Title>
