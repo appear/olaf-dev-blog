@@ -5,11 +5,6 @@ import styled from "styled-components"
 import Layout from "../shared/layout"
 import Posts from "../components/posts"
 
-const Conatiner = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-`
-
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
@@ -17,9 +12,7 @@ const IndexPage = ({
 }) => {
   return (
     <Layout>
-      <Conatiner>
-        <Posts edges={edges} />
-      </Conatiner>
+      <Posts edges={edges} />
     </Layout>
   )
 }
