@@ -63,5 +63,8 @@ export default `
     height: 1px;
     background-color: #efefef;
   }
- 
+  
+  pre {
+    margin: 15px 0;
+  }
 `
