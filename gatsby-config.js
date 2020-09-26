@@ -9,6 +9,7 @@ module.exports = {
         path: `${__dirname}/data/pages`,
       },
     },
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

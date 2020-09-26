@@ -16,6 +16,7 @@ const CardTitle = styled.div`
   font-size: 19px;
   font-weight: bold;
   margin-bottom: 20px;
+  line-height: 1.4;
 `
 const CardDate = styled.div`
   font-size: 14px;
