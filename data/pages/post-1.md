@@ -54,3 +54,12 @@ intersection observer 를 이용한 lazy-loading 으로 퍼포먼스개선
 vue -> react 로 전환
 이력서를 읽은 사람은 왜 scroll event 를 활용하지 않고 intersection observer 를 사용했는지, vue 를 왜 react 로 변경하였는지 궁금 할 수 있다.
 그냥 다른 사람들 다 쓰길래 힙해보여서 저도 사용했습니다… 보다는 기술들의 장단점을 파악하여 논리적으로 설명하는 것이 좋다.
+
+
+```js
+console.log('hello')
+
+function foo() {
+    return 10
+}
+```
