@@ -7,7 +7,7 @@ module.exports = {
     description: "개발에 관한 이야기를 나누는 개인 공간입니다.",
     author: "Olaf",
     ogImage:
-      "https://github.com/appear/olaf-dev-blog/blob/master/static/og-image/png",
+      "https://github.com/appear/olaf-dev-blog/blob/master/static/og-image.png",
   },
   plugins: [
     {
