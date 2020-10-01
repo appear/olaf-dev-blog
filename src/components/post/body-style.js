@@ -44,24 +44,34 @@ export default `
   }
   
   p {
-    padding: 10px 0;
+    margin: 20px 0;
   }
 
   ul {
     margin: 20px 0;
   }
 
-  li {
-    position: relative;
-    padding: 10px 0 10px 25px;
+  ol { 
+    list-style: decimal;
+    padding-left: 20px;
   }
 
-  li:before {
+  ul li {
+    position: relative;
+    padding: 0 0 0 25px;
+    margin-bottom: 10px;
+  }
+
+  ul li:before {
     content: "👉";
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 0;
     font-weight: bold;
+  }
+
+  li { 
+    margin-bottom: 10px; 
   }
 
   img {

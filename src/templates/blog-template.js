@@ -4,10 +4,8 @@ import { graphql } from "gatsby"
 import Layout from "../shared/layout"
 import Body from "../components/post/body"
 
-export default function blogTemplate({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+export default function blogTemplate({ data }) {
+  const { markdownRemark } = data
   const { html, frontmatter } = markdownRemark
 
   const { title, banner, summary } = frontmatter
