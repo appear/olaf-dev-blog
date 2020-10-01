@@ -1,6 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
 
 import ResetStyles from "./reset-style"
 import Header from "./header"
@@ -11,6 +12,24 @@ const Container = styled.div`
 `
 
 export default function Layout({ children }) {
+  const {
+    site: {
+      siteMetadata: { title, description, siteUrl, author, ogImage },
+    },
+  } = useStaticQuery(graphql`
+    query HeaderQuery {
+      site {
+        siteMetadata {
+          title
+          description
+          siteUrl
+          author
+          ogImage
+        }
+      }
+    }
+  `)
+
   return (
     <>
       <Helmet>
@@ -19,6 +38,16 @@ export default function Layout({ children }) {
           type="text/css"
           href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
         />
+        <meta name="subject" content={title} />
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <meta name="author" content={author} />
+        <meta name="keywords" content={title} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={siteUrl} />
       </Helmet>
       <Header />
       <ResetStyles />
