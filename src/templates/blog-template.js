@@ -8,9 +8,18 @@ export default function blogTemplate({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { html } = markdownRemark
+  const { html, frontmatter } = markdownRemark
+
+  const { title, banner, summary } = frontmatter
+
+  const seo = {
+    title,
+    banner,
+    summary,
+  }
+
   return (
-    <Layout>
+    <Layout seo={seo}>
       <div className="blog-post-container">
         <div className="blog-post">
           <Body>
