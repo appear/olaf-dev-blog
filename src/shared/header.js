@@ -6,10 +6,9 @@ const HeaderContainer = styled.div`
   position: relative;
   height: 52px;
   box-sizing: border-box;
-  box-shadow: 0 3px 10px 0 rgba(114, 114, 114, 0.08);
   max-width: 800px;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 `
 
 const Logo = styled.h1`
@@ -41,12 +40,9 @@ const Label = styled.span`
 function Header() {
   return (
     <HeaderContainer>
-      <Logo>
-        <Link to="/">☂️ DEV.OLAF</Link>
-      </Logo>
       <MenuListContainer>
         <MenuContainer>
-          <Label to="/posts">POSTS</Label>
+          <Label to="/posts">글</Label>
         </MenuContainer>
         <MenuContainer>
           <Label>
@@ -54,7 +50,7 @@ function Header() {
               to="https://www.linkedin.com/in/%EC%84%9D%EC%A7%84-%EA%B3%A0-a0a5a5128/"
               target="_blank"
             >
-              ABOUT
+              링크드인
             </Link>
           </Label>
         </MenuContainer>
